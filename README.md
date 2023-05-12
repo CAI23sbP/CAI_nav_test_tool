@@ -20,7 +20,7 @@ IF you want to train your agent,you should go to under link
 
 `sudo gedit ~/.bashrc`
 
-`export SIM_PKG="<$your home>/sim_ws/src/nav_test_tool/navigation_sim"`
+`export SIM_PKG="<$your home>/sim_ws/src/nav_test_tool"`
 
 `source ~/sim_ws/devel/setup.bash`
 
