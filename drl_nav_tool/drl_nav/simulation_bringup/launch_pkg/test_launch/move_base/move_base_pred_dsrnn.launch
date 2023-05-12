@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+  <!-- Arguments -->
+  <arg name="model" default="burger"/>
+  <arg name="cmd_vel_topic" default="/cmd_vel" />
+  <arg name="odom_topic" default="odom" />
+  <arg name="namespace" default="" />
+  <arg name="tf_prefix" default="burger" />
+  <!-- move_base -->
+  <node name="drl_agent" pkg="test" type="predict_ds_rnn_agent_node.py"  output="screen">
+    
+  <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+
+    <rosparam file="$(find robohumstamap)/robot_type/$(arg model)/costmaps/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find robohumstamap)/robot_type/$(arg model)/costmaps/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find simulation-setup)/move_base/move_base_params.yaml" command="load" />
+
+    <remap from="cmd_vel" to="$(arg cmd_vel_topic)"/>
+    <remap from="odom" to="$(arg odom_topic)"/>
+  </node>
+</launch>

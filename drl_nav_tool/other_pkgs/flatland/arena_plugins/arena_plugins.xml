@@ -1,0 +1,17 @@
+<library path="lib/libarena_plugins_lib">
+  <class type="flatland_plugins::RandomMove" base_class_type="flatland_server::ModelPlugin">
+    <description>Move the object randomly</description>
+  </class>
+  <class type="flatland_plugins::Tween2" base_class_type="flatland_server::ModelPlugin">
+    <description>Move the object with a given trajectory</description>
+  </class>
+  <class type="flatland_plugins::PedsimMovement" base_class_type="flatland_server::ModelPlugin">
+    <description>Pedestrians from pedsim_ros are connected to bodies in flatland.</description>
+  </class>
+  <class type="flatland_plugins::VehicleMovement" base_class_type="flatland_server::ModelPlugin">
+    <description>Pedestrians from pedsim_ros are connected to bodies in flatland.</description>
+  </class>
+    <class type="flatland_plugins::PosePub" base_class_type="flatland_server::ModelPlugin">
+    <description>publish the pose of dynamic agents</description>
+  </class>
+</library>

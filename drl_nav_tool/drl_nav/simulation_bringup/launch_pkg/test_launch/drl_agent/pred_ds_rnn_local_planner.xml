@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+    <node name="DRL_local_planner" pkg="arena_local_planner_drl" type="predict_ds_rnn_agent_node.py" args="$(arg agent_name)"/>
+</launch>

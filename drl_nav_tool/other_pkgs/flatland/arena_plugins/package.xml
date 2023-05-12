@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>arena_plugins</name>
+  <version>0.0.1</version>
+  <description>addtional plugins for arena</description>
+  <license>BSD</license>
+  <url type="website">https://bitbucket.org/avidbots/flatland</url>
+
+  <maintainer email="lei.jiaocn@gmail.com">Lei Jiao</maintainer>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>flatland_server</depend>
+  <depend>pluginlib</depend>
+  <depend>roscpp</depend>
+  <depend>yaml-cpp</depend>
+  <depend>cmake_modules</depend>
+  <depend>tf</depend>
+  <depend>std_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>flatland_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>flatland_plugins</depend>
+
+  <export>
+    <flatland_server plugin="${prefix}/arena_plugins.xml" />
+  </export>
+</package>

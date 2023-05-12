@@ -1,0 +1,10 @@
+lcov.info
+docs/doxygen/*
+!docs/doxygen/conf.py
+!docs/doxygen/index.rst
+docs/_build/*
+docs/_templates/*
+.vscode/*
+*/.vscode
+.history
+*/.history

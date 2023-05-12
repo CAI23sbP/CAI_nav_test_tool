@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+  <arg name="rviz_file" default="nav"/>
+  <arg name="model" default="model"/>
+  <arg name="show_rviz" default="true" />
+
+
+  <arg name="visualization" default="rviz" doc="[rviz, flatland]" />
+
+  <remap from="/move_base_simple/goal" to="task_generator/set_goal" />
+
+  <!-- launch flatland server -->
+  <node name="flatland_server" pkg="flatland_server" type="flatland_server">
+
+  </node>
+
+  <!--  _____________ Robot Model _____________  -->
+  <arg name="initial_pose_x" default="0.0"/>
+  <arg name="initial_pose_y" default="0.0"/>
+  <arg name="initial_pose_a" default="0.0"/>
+
+  <!--  _____________ flatland viz  _____________  -->
+  <group if="$(eval arg('visualization') == 'flatland')">
+    <node name="flatland_viz" pkg="flatland_viz" type="flatland_viz" required="false" />
+  </group>
+
+  <!-- start_rviz -->
+  <include file="$(find simulation_bringup)/launch_pkg/utils/rviz.launch">
+    <arg name="show_rviz" value="$(eval arg('visualization') == 'rviz' and arg('show_rviz') == true)" />
+  </include>
+</launch>
