@@ -5,14 +5,14 @@
 
 
 IF you want to train your agent,you should go to under link 
-[https://github.com/CAI23sbP/nav_train_tool]
+[https://github.com/CAI23sbP/CAI_nav_train_tool]
 
 
 # 2. How to install #
 
-`mkdir sim_ws && cd sim_ws && mkdir src`
+`mkdir test_ws && cd test_ws && mkdir src`
 
-`cd src && git clone https://github.com/CAI23sbP/nav_test_tool.git`
+`cd src && git clone https://github.com/CAI23sbP/CAI_nav_test_tool.git`
 
 `cd .. && rosdep install --from-paths src --ignore-src --rosdistro noetic -y`
 
@@ -20,15 +20,15 @@ IF you want to train your agent,you should go to under link
 
 `sudo gedit ~/.bashrc`
 
-`export SIM_PKG="<$your home>/sim_ws/src/nav_test_tool"`
+`export SIM_PKG="<$your home>/test_ws/src/CAI_nav_test_tool"`
 
-`source ~/sim_ws/devel/setup.bash`
+`source ~/test_ws/devel/setup.bash`
 
 `source ~/.bashrc`
 
 `source devel/setup.bash`
 
-`cd src && cd nav_test_tool && pip install -r requirements.txt`
+`cd src && cd CAI_nav_test_tool && pip install -r requirements.txt`
 
 
 
@@ -55,7 +55,7 @@ IF you want to train your agent,you should go to under link
 ### To evaluation ###
 Go to evaluation folder.
 
-`cd /navi_ws/src/nav_test_tool/evaluation`
+`cd /test_ws/src/nav_test_tool/evaluation`
 
 Get metrix for evaluation.
 
@@ -87,3 +87,8 @@ ETC....
 
 - [ ] Put rosparams or params into config.py  (?)
 - [ ] Spawn ORCA in the flatland  (?)
+
+
+# CONTACT US #
+[http://cai.hanyang.ac.kr/] 
+[sbp0783@naver.com]
