@@ -1,4 +1,4 @@
-# nav_test_tool
+# CAI_nav_test_tool
 ### "We have modified [arena_rosnav](https://github.com/Arena-Rosnav/arena-rosnav) to make it easy for users to customize." ###
 
 # 1. INFORMATION #
