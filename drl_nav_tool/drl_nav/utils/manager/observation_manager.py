@@ -150,8 +150,6 @@ class ObservationManager:
         self.pub_obst_odom.publish(self.cluster)
         # reset cluster
         self.markers.markers.clear()
-
-        self.cluster = Clusters()
         self.update_cluster = True
 
     def scan_range(self,msg):
@@ -162,7 +160,7 @@ class ObservationManager:
     
     def fill_cluster_dist(self):
         self.markers.markers.append(self.vis_robot())
-
+        self.cluster = Clusters()
         for i, topic in enumerate(self.obstacles):
             x = self.obstacles[topic][0].x - self.robot_pos_x 
             y = self.obstacles[topic][0].y - self.robot_pos_y
@@ -188,6 +186,7 @@ class ObservationManager:
     def fill_cluster_gt(self):
         
         self.markers.markers.append(self.vis_robot())
+        self.cluster = Clusters()
         for i, topic in enumerate(self.obstacles):
     
             tmp_point = Point()
