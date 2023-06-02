@@ -21,7 +21,7 @@ class Constants:
         LOCAL_PLANNER = "dwa" # [teb, dwa, mpc, rlca, pred_dsrnn, rosnav,etc...]
         AGENT_NAME = "" ## DON'T TOUCH IT
         COMPLEXITY = 1 ## doc="1 = Map known, Position known; 2 = Map known, Position unknown (AMCL); 3 = Map unknown, Position unknown (SLAM)"
-        IS_GT = False  ## if True: accept ground true human states
+        IS_GT = True  ## if True: accept ground true human states
 
     class ObstacleManager:
         IS_HUMAN = True
@@ -127,7 +127,7 @@ class Test:
     WEIGHT_PATH = Train.WEIGHT_PATH
     GOAL_DISTANCE = Train.GOAL_DISTANCE
     DESIRED_RESET = 1
-    TASK_MODE = "ScenarioTask"  ##ScenarioTask ,RandomTask
+    TASK_MODE = "RandomTask"  ##ScenarioTask ,RandomTask
 
-    RECORDING = True
+    RECORDING = False
     

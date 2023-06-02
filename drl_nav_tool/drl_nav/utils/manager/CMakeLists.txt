@@ -29,6 +29,5 @@ catkin_package(
 
 catkin_install_python(PROGRAMS
   map_distance_node.py
-  observation_manager.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )

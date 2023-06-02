@@ -1,16 +1,19 @@
+# Chair
+
 bodies:
-  - color: [1, 0.2, 0.1, 1.0]
-    footprints:
-      - collision: "true"
-        density: 0
-        layers: [all]
-        points:
-          - [0.7607740402134184, 0.0]
-          - [-0.38038702010670905, 0.6588496453645445]
-          - [-0.38038702010670955, -0.6588496453645443]
-        sensor: "false"
-        type: polygon
-    name: random
+  - name: chair
     pose: [0, 0, 0]
-    type: dynamic
-plugins: []
+    type: static
+    footprints:
+    # represented by a 1 m circle and a center pole, probably a bad representation
+      - type: circle
+        center: [0, 0]
+        radius: 1
+        density: 0
+        layers: ["static"]
+
+      - type: circle
+        center: [0, 0]
+        density: 0
+        radius: 0.2
+

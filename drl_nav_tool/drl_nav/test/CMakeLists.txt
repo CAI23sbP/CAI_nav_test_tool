@@ -159,8 +159,8 @@ include_directories(catkin_install_python
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
 catkin_install_python(PROGRAMS
-   ds_rnn_agent_node.py
-   predict_ds_rnn_agent_node.py
+   drl_agents/ds_rnn_agent_node.py
+   
    DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
  )
 

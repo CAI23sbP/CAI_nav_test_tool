@@ -1,2 +1,0 @@
-python -u scripts/data/create_datasets_trajnet.py --dataset synth | tee -a logs/create_datasets.txt
-python -u scripts/data/create_batch_datasets_trajnet.py --dataset synth | tee -a logs/create_batch_datasets.txt
